@@ -12,6 +12,10 @@
 		A74562B01FAD5F2600276AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74562AE1FAD5F2600276AB4 /* Main.storyboard */; };
 		A74562B21FAD5F2600276AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74562B11FAD5F2600276AB4 /* Assets.xcassets */; };
 		A74562B51FAD5F2600276AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74562B31FAD5F2600276AB4 /* LaunchScreen.storyboard */; };
+		A74562BD1FAD60C500276AB4 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74562BC1FAD60C500276AB4 /* AddMemoViewController.swift */; };
+		A74562BF1FAD614B00276AB4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74562BE1FAD614B00276AB4 /* DetailViewController.swift */; };
+		A7DF292D1FAD802D00BFDE40 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF292B1FAD802D00BFDE40 /* MemoTableViewCell.swift */; };
+		A7DF292E1FAD802D00BFDE40 /* MemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7DF292C1FAD802D00BFDE40 /* MemoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		A74562B11FAD5F2600276AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74562B41FAD5F2600276AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A74562B61FAD5F2600276AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74562BC1FAD60C500276AB4 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		A74562BE1FAD614B00276AB4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A7DF292B1FAD802D00BFDE40 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		A7DF292C1FAD802D00BFDE40 /* MemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 			children = (
 				A74562AA1FAD5F2600276AB4 /* AppDelegate.swift */,
 				A74562AC1FAD5F2600276AB4 /* ViewController.swift */,
+				A74562BC1FAD60C500276AB4 /* AddMemoViewController.swift */,
+				A74562BE1FAD614B00276AB4 /* DetailViewController.swift */,
 				A74562AE1FAD5F2600276AB4 /* Main.storyboard */,
 				A74562B11FAD5F2600276AB4 /* Assets.xcassets */,
 				A74562B31FAD5F2600276AB4 /* LaunchScreen.storyboard */,
 				A74562B61FAD5F2600276AB4 /* Info.plist */,
+				A7DF292B1FAD802D00BFDE40 /* MemoTableViewCell.swift */,
+				A7DF292C1FAD802D00BFDE40 /* MemoTableViewCell.xib */,
 			);
 			path = RemakeMemo;
 			sourceTree = "<group>";
@@ -74,6 +86,7 @@
 				A74562A31FAD5F2600276AB4 /* Sources */,
 				A74562A41FAD5F2600276AB4 /* Frameworks */,
 				A74562A51FAD5F2600276AB4 /* Resources */,
+				A712CCAA1FB1B5C1001EAC90 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,18 +139,38 @@
 				A74562B51FAD5F2600276AB4 /* LaunchScreen.storyboard in Resources */,
 				A74562B21FAD5F2600276AB4 /* Assets.xcassets in Resources */,
 				A74562B01FAD5F2600276AB4 /* Main.storyboard in Resources */,
+				A7DF292E1FAD802D00BFDE40 /* MemoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A712CCAA1FB1B5C1001EAC90 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A74562A31FAD5F2600276AB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7DF292D1FAD802D00BFDE40 /* MemoTableViewCell.swift in Sources */,
+				A74562BD1FAD60C500276AB4 /* AddMemoViewController.swift in Sources */,
 				A74562AD1FAD5F2600276AB4 /* ViewController.swift in Sources */,
 				A74562AB1FAD5F2600276AB4 /* AppDelegate.swift in Sources */,
+				A74562BF1FAD614B00276AB4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
